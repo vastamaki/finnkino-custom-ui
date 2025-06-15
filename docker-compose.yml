@@ -1,0 +1,15 @@
+services:
+  finnkino-ui:
+    container_name: finnkino-ui
+    build:
+      context: .
+    restart: unless-stopped
+    pull_policy: build
+    networks:
+      macvlan:
+    ports:
+      - "80:80"
+
+networks:
+  macvlan:
+    external: true
