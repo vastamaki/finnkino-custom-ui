@@ -142,7 +142,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
         <div className="flex-1" />
 
         {/* Bottom Section - Movie Info */}
-        <div className="p-6 space-y-4">
+        <div className="p-6 pb-0 space-y-4">
           {/* Title */}
           <div className="space-y-2">
             <h3 className="font-bold text-2xl text-white line-clamp-2 leading-tight drop-shadow-lg">
