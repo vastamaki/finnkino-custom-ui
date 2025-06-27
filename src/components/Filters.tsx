@@ -44,7 +44,11 @@ const getDateOptions = () => {
   for (let i = 0; i < 7; i++) {
     const date = new Date(today);
     date.setDate(today.getDate() + i);
-    const dateStr = date.toISOString().split("T")[0];
+    const dateStr = `${date.getDate().toString().padStart(2, "0")}.${(
+      date.getMonth() + 1
+    )
+      .toString()
+      .padStart(2, "0")}.${date.getFullYear()}`;
     const displayStr =
       i === 0
         ? "Today"

@@ -1,21 +1,24 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Filters } from "@/components/Filters";
 import { MovieShowtimes } from "@/components/MovieShowtimes";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 const Index = () => {
-  const [selectedTheater, setSelectedTheater] = useState<string>("all");
+  const [selectedTheater, setSelectedTheater] = useState<string>("1015");
   const [selectedDate, setSelectedDate] = useState<string>(
-    new Date().toISOString().split("T")[0]
+    new Date().toLocaleDateString("fi-FI", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    })
   );
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   return (
     <ThemeProvider>
       <div className="h-full">
-        <header className="sticky top-0 z-50">
+        <header>
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -34,7 +37,7 @@ const Index = () => {
           </div>
         </header>
 
-        <main className="h-full max-w-7xl mx-auto px-6 py-6">
+        <main className="h-full max-w-7xl mx-auto px-6">
           <div className="mb-6">
             <Filters
               selectedTheater={selectedTheater}

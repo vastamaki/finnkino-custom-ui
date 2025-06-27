@@ -51,7 +51,7 @@ export const MovieModal: React.FC<MovieModalProps> = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-6xl w-full p-0 overflow-hidden bg-background border-border/20">
-        <ScrollArea className="h-[100vh] md:max-h-[80vh]">
+        <ScrollArea className="h-[100dvh] md:max-h-[80vh]">
           <div className="relative">
             <MovieModalHero movie={movie} />
             <MovieModalContent movie={movie} />

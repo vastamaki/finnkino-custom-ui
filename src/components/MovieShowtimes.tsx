@@ -398,7 +398,7 @@ export const MovieShowtimes: React.FC<MovieShowtimesProps> = ({
       }) || [];
 
   return (
-    <ScrollArea className="h-[calc(100vh-14.5rem)] lg:h-[calc(100dvh-11rem)] overflow-y-auto">
+    <ScrollArea className="h-[calc(100dvh-12.5rem)] lg:h-[calc(100dvh-9rem)] overflow-y-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {movieShowtimes.length === 0 ? (
           <div className="col-span-full text-center py-20">
