@@ -5,6 +5,7 @@ services:
       context: .
     restart: unless-stopped
     pull_policy: build
+    hostname: finnkino-ui
     networks:
       macvlan:
     ports:
